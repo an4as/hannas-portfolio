@@ -1,0 +1,22 @@
+$brandColor1: #d014af;
+$brandColor2: #0208df;
+$mainFont: 'Noto Sans', sans-serif;
+$secondFond: 'Noto Serif', serif;
+
+body{
+    font-family: $mainFont;
+}
+h1, h2, h3, h4, h5{
+    font-family: $secondFond;
+}
+h1{
+    font-size: 20vh;
+    color: #fff;
+}
+
+.main-banner{
+    background: url(../img/01_main_photo.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
