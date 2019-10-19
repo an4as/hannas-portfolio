@@ -2,7 +2,12 @@ $brandColor1: #d014af;
 $brandColor2: #0208df;
 $mainFont: 'Noto Sans', sans-serif;
 $secondFond: 'Noto Serif', serif;
-
+html, body {
+    min-height: 100%;
+}
+// html {
+//     height: 100%;
+// }
 body{
     font-family: $mainFont;
 }
@@ -15,8 +20,34 @@ h1{
 }
 
 .main-banner{
-    background: url(../img/01_main_photo.png) no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    background: url(../img/01_main_photo.png) no-repeat fixed;
+    // background-size: cover;
+    // height: 100vh;
+    background-size: 100% auto;
+    // height: 100vh;
+    h1{
+        font-size: 24vh;
+        color: #fff;
+        margin-top: 80px;
+        line-height: 1.12;
+    }
+   }
+
+.main-banner-text{
+    padding: 25px 0;
+    div:last-child p{
+        color: #fff;
+        font-style: italic;
+        font-size: 12px;
+        padding: 5px 0 60px 0;
+        text-align: right;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .main-banner .container {
+        max-width: 1300px;
+    }
 }
 
