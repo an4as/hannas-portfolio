@@ -26,10 +26,17 @@ ul {
 }
 
 .main-banner h1 {
-  font-size: 24vh;
-  color: #fff;
-  margin-top: 80px;
-  line-height: 1.12;
+  font-size: 13vw;
+  margin-top: 12%;
+  line-height: 13vw;
+  color: #ffffff;
+  font-family: "Noto Serif";
+  font-weight: 400;
+}
+
+.main-banner .container-fluid {
+  padding-right: 90px;
+  padding-left: 90px;
 }
 
 .main-banner-text {
@@ -52,7 +59,10 @@ ul {
 
 .annotation {
   font-size: 14px;
-  color: #0208df;
+  line-height: 21px;
+  color: #0327e2;
+  font-family: "Noto Serif";
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -67,12 +77,11 @@ ul {
       writing-mode: tb-rl;
   display: inline;
   margin-top: 147px;
-  height: 100%;
   float: left;
 }
 
 .best-works h3 {
-  color: #d014af;
+  color: #f020af;
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 44px;
@@ -86,6 +95,7 @@ ul {
 
 .work-desciption p {
   font-size: 14px;
+  line-height: 21px;
 }
 
 .mens-shop .work-desciption {
@@ -159,18 +169,16 @@ ul {
   display: inline;
   margin-top: 68px;
   padding-left: 77px;
-  height: 52%;
   float: left;
 }
 
 .best-banners .date-right {
   margin-top: 68px;
   margin-left: 230px;
-  height: 52%;
 }
 
 .more-works-main h3 {
-  color: #d014af;
+  color: #f020af;
   font-size: 48px;
   font-weight: 600;
   width: 100%;
@@ -214,7 +222,7 @@ ul {
 }
 
 .aboutme-main h3 {
-  color: #d014af;
+  color: #f020af;
   font-size: 48px;
 }
 
@@ -248,12 +256,12 @@ ul {
 }
 
 .contacts-main h3 {
-  color: #d014af;
+  color: #f020af;
   font-size: 48px;
 }
 
 .contacts-main i {
-  color: #d014af;
+  color: #f020af;
 }
 
 .contacts-main a {
