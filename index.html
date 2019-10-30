@@ -17,6 +17,20 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .filter-cat-results .f-cat {
+            opacity: 0;
+            display: none;
+        }
+        
+        .filter-cat-results .f-cat.filtered {
+            opacity: 1;
+            display: table-row;
+            -webkit-animation: fadeIn 0.65s ease forwards;
+            animation: fadeIn 0.65s ease forwards;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -45,15 +59,15 @@
                     </div>
                 </nav>
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-7 pl-0">
                         <h1>Hanna's Portfolio</h1>
                     </div>
                 </div>
                 <div class="row main-banner-text">
-                    <div class="col-3">
-                        <p>Портфолио <br> Анны Климушевой </p>
+                    <div class="col-3 pl-0">
+                        <p class="vertical-text" style="display: inline-block; height: 146px;">Портфолио <br> Анны Климушевой </p>
                     </div>
-                    <div class="col-5 offset-4">
+                    <div class="col-5 offset-4 d-flex align-items-end">
                         <p>
                             Здравствуйте! Я Анна, молодой веб-дизайнер <br>
                             На этой странице я хочу представить вам свои работы <br>
@@ -80,7 +94,7 @@
                         <h3>Лучший сайт</h3>
                         <div class="work-desciption">
                             <h5>Проект “ManShop”</h5>
-                            <p>Это интернет магазин мужской одежды, 
+                            <p class="text-block">Это интернет магазин мужской одежды, 
                             обуви и акссесуаров. На сайте представлены товары, 
                             есть возможность заказа онлайн, личный кабинет, 
                             все необходимые инструменты для сохранения 
@@ -93,16 +107,16 @@
                 </div>
                 <div class="row best-logo">
                     <div class="col">
-                        <p class="date date-left">Август 2018</p>
+                        <p class="date date-left vertical-text">Август 2018</p>
                         <div class="work-title d-flex flex-row align-self-start">
-                            <h3>Лучшее лого</h3>                            
+                            <h3 class="vertical-text">Лучшее лого</h3>                            
                             <img src="img/04.jpeg" alt="" style="margin-left: -202px;">
                             
                             
                         </div>
                         <div class="work-desciption">
                             <h5>Проект “Akustikos”</h5>
-                            <p>Логотип для арт-группы Akustikos 
+                            <p class="text-block">Логотип для арт-группы Akustikos 
                                 был сделан в стиле неомодерн. 
                                 За основу был взят необычный акцидентный шрифт 
                                 с элементами обрубовки.</p>
@@ -134,7 +148,7 @@
                         </div>
                         <div class="work-desciption d-inline-block" style="width: 27%; padding-top:72px;">
                                 <h5>3 баннера для “EnergoTest”</h5>
-                                <p>Это трилогия изображений для главного 
+                                <p class="text-block">Это трилогия изображений для главного 
                                     экрана сайта. Их цель максимально 
                                     информативно и при этом привлекательно 
                                     выразить деятельность компнаии и спектр их услуг.</p>
@@ -143,39 +157,40 @@
                 </div>
             </div>
         </section>
-        <section class="more-works-main my-5" >
+        <section class="more-works-main my-5 filtering" >
             <div class="container">
                 <div class="row text-center"><h3>Больше работ</h3></div>
-                <div class="row work-picker ">
+                <div class="row work-picker filter-cat">
                     <ul class="justify-content-center">
-                        <li>Web</li>
-                        <li>Logo</li>
-                        <li>Vector</li>
-                        <li>Other</li>
+                        <li class="smth"> <button class="filter-btn filter-web" data-cat="filter-web"  > Web</button></li>
+                        <li class="smth"> <button class="filter-btn filter-logo" data-cat="filter-logo"  > Logo</button></li>
+                        <li class="smth"> <button class="filter-btn filter-vector" data-cat="filter-vector"  > Vector</button></li>
+                        <li class="smth"> <button class="filter-btn filter-other" data-cat="filter-other"  > Other</button></li>
+                        <li class="smth"> <button class="filter-btn filter-all" data-cat="filter-all"  > All</button></li>
                     </ul>
                 </div>
-                <div class="row work-tmbl">
-                    <div class="col-4 mb-4">
+                <div class="row work-tmbl filter-cat-results">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-web">
                         <img src="img/09.jpeg" alt="Промо сайт Партнерская программа BG">
                         <p>Промо сайт <br> "Партнерская программа BG"</p>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-web">
                         <img src="img/10.jpeg" alt="Сайт визитка AgilWorld">
                         <p class="text-white">Сайт визитка <br> "AgilWorld"</p>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-logo">
                         <img src="img/11.jpeg" alt="Логотип Kristale Agency">
                         <p>Логотип <br> "Kristale Agency"</p>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-vector">
                         <img src="img/12.jpeg" alt="Сеть иконок Детство">
                         <p class="text-white">Сеть иконок <br> "Детство"</p>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-vector">
                         <img src="img/13.jpeg" alt="Сеть иконок Web">
                         <p>Сеть иконок <br> "Web"</p>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-4 mb-4 f-cat" data-filter="filter-other">
                         <img src="img/14.jpeg" alt="Презентационный баннер Horror Quest">
                         <p class="text-white">Презентационный баннер <br> "Horror Quest"</p>
                     </div>
@@ -187,14 +202,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-2">
-                        <h3>Обо мне</h3> 
+                        <h3 class="vertical-text">Обо мне</h3> 
                     </div>
                     <div class="col-3">
                         <img src="img/16.jpeg" alt="веб-дизайнер Анна Климушева">
                     </div>
                     <div class="col-3">
                         <h5>Опыт</h5>
-                        <p>В сфере веб-дизайна я работаю 
+                        <p class="text-block">В сфере веб-дизайна я работаю 
                         с 2017 года. В апреле начала работу 
                         в компании PanshinGroup, где работала 
                         до декрета. В отпуске по уходу 
@@ -209,7 +224,7 @@
                     </div>
                     <div class="col-4">
                             <h5>Знания</h5>
-                            <p>Основные скилы в веб-дизайне я получила на курсах Highlights и SkillBox. 
+                            <p class="text-block">Основные скилы в веб-дизайне я получила на курсах Highlights и SkillBox. 
                             Там же изучила основы верстки и бэкэнда. Также успешно прошла обучение 
                             в художественной школе. За спиной высшее образование по другой специальности.
                             </p>
@@ -279,5 +294,89 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+// filtering code
+// var filterActive;
+ 
+//  function filterCategory(filterbtn) {        
+ 
+//      $('.filter-cat-results .f-cat').removeClass('filtered'); // reset results list
+     
+     
+//      var selector = ".filtering .f-cat"; // the filtering in action for all criteria
+//      var $btn = $(this);
+//      var attr = filterbtn.getAttribute("data-cat");
+     
+     
+//      if (attr == 'filter-web') {
+//         // Element has this attribute        
+//         var a = 'filter-web';
+//         selector = '[data-filter=' + a + "]";
+        
+//     } else if (attr == 'filter-logo'){
+//         var a = 'filter-logo';
+//         selector = '[data-filter=' + a + "]";  
+//     } else if (attr == 'filter-vector'){
+//         var a = 'filter-vector';
+//         selector = '[data-filter=' + a + "]";  
+//     } else if (attr == 'filter-other'){
+//         var a = 'filter-other';
+//         selector = '[data-filter=' + a + "]";  
+//     } else if (attr == 'filter-all'){
+//         $(selector).addClass('filtered');
+//      }
+
+             
+//      $(selector).addClass('filtered'); // show all results
+//     //  filterActive = cat1; // reset active filter
+//  }
+
+ $('.filtering .f-cat').addClass('filtered'); // start by showing all items
+
+ $('.filter-btn').on('click', function(e) {
+      
+      
+      $('.filter-cat-results .f-cat').removeClass('filtered'); // reset results list
+     
+     
+     var selector = ".filtering .f-cat"; // the filtering in action for all criteria
+      
+     if ($(this).hasClass("filter-active")){
+        $(selector).addClass('filtered');
+        $(this).removeClass("filter-active");
+     } else {
+        $(this).addClass("filter-active");
+        $(this).parent().siblings().children().removeClass("filter-active");  
+        if ($(this).hasClass( "filter-web" )) {
+        // Element has this attribute        
+        var a = 'filter-web';
+        selector = '[data-filter=' + a + "]";        
+        } else if ($(this).hasClass( "filter-logo" )){
+            var a = 'filter-logo';
+            selector = '[data-filter=' + a + "]";  
+        } else if ($(this).hasClass( "filter-vector" )){
+            var a = 'filter-vector';
+            selector = '[data-filter=' + a + "]";  
+        } else if ($(this).hasClass( "filter-other" )){
+            var a = 'filter-other';
+            selector = '[data-filter=' + a + "]";  
+        } else if ($(this).hasClass( "filter-all" )){
+            $(selector).addClass('filtered');
+        }
+
+                
+        $(selector).addClass('filtered');
+        e.preventDefault();
+     }
+     
+     
+ });
+ // call the filtering function when selects are changed
+//  $('.filtering button').click(function() { 
+     
+//      filterCategory('.filter-btn');        
+     
+//  });
+</script>
 </body>
 </html>
