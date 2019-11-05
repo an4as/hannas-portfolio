@@ -35,15 +35,19 @@
 <body>
     <header>
         <div class="main-banner">
+            <!-- <div style="height: inherit; position:absolute;">
+            </div> -->
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="#">ANN</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo 1.svg" alt="Hanna's portfolio logo">
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">Лучшее <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
@@ -65,10 +69,10 @@
                 </div>
                 <div class="row main-banner-text">
                     <div class="col-3 pl-0">
-                        <p class="vertical-text" style="display: inline-block; height: 146px;">Портфолио <br> Анны Климушевой </p>
+                        <p class="vertical-text" style="display: inline-block; height: 146px; font-weight: 700;">Портфолио <br> Анны Климушевой </p>
                     </div>
-                    <div class="col-5 offset-4 d-flex align-items-end">
-                        <p>
+                    <div class="col-5 offset-4 d-flex align-items-end text-right" style="margin-right: 0!important;">
+                        <p style="display: inline-block;">
                             Здравствуйте! Я Анна, молодой веб-дизайнер <br>
                             На этой странице я хочу представить вам свои работы <br>
                             за период с 2017 по 2019 год. Спасибо за внимание!
@@ -84,14 +88,20 @@
         <section class="best-works my-5">
             <div class="container">
                 <div class="row mens-shop">
-                    <div class="col">
-                        <img  src="img/03.jpeg" alt="">
-                        <img  src="img/02.jpeg" alt="">
-                        <p class="annotation mt-5" >“Интернет-магазин для <br>
-                        сети мужских товаров ManShop”</p>
+                    <div class="col-12 col-lg-8">
+                        <div class="float-left" style="width: 80%;">
+                            <img  src="img/03.jpeg" alt="">
+                            <img  src="img/02.jpeg" alt="">
+                            <p class="annotation mt-5" style="width: 550px; display: inline-block;">“Интернет-магазин для <br>
+                            сети мужских товаров ManShop”</p>
+                        </div>
+                        <div>
+                            <h3 class="vertical-text-tb">Лучший сайт</h3>
+                        </div>
+                        
                     </div>
-                    <div class="col">
-                        <h3>Лучший сайт</h3>
+                    <div class="col-12 col-lg-4" style="position: relative;">
+                        
                         <div class="work-desciption">
                             <h5>Проект “ManShop”</h5>
                             <p class="text-block">Это интернет магазин мужской одежды, 
@@ -100,13 +110,13 @@
                             все необходимые инструменты для сохранения 
                             закладок и связи с магазином. Все сделано в минималистичном,
                              но элегентном английском стиле</p>
-                        </div>
-                        
+                        </div>                        
+                        <p class="date date-right vertical-text-tb" style="position:absolute; bottom:0; right:0;">Октябрь 2019</p>
                     </div>
                     
                 </div>
                 <div class="row best-logo">
-                    <div class="col">
+                    <div class="col-5 col-lg-6">
                         <p class="date date-left vertical-text">Август 2018</p>
                         <div class="work-title d-flex flex-row align-self-start">
                             <h3 class="vertical-text">Лучшее лого</h3>                            
@@ -122,31 +132,32 @@
                                 с элементами обрубовки.</p>
                         </div>
                     </div>
-                    <div class="col"  style="z-index: 5;">
-                        <img src="img/05.jpeg" class="bp" alt="">
-                        <p class="annotation">“Логотип 
+                    <div class="col-7 col-lg-6 d-flex"  style="z-index: 5;">
+                        <div class="bp order-1 order-lg-0"><img src="img/05.jpeg"  alt=""></div>
+                        
+                        <p class="annotation order-0 order-lg-1">“Логотип 
                             для арт-группы
                             Akustikos”</p>
                     </div>
                 </div>
-                <div class="row best-banners" style="margin-top: -110px; margin-bottom: 140px;">
-                    <div class="col" style="padding-top: 196px; z-index: 5;">
-                        <p class="annotation">"Баннер №2"</p>
-                        <img src="img/07.jpeg" alt="">
+                <div class="row best-banners d-flex">
+                    <div class="col order-1 order-lg-0 ">
+                        <p class="annotation  ">"Баннер №2"</p>
+                        <img class="" src="img/07.jpeg" alt="">
                         
                     </div>
-                    <div class="col" style="margin-left: -130px; z-index: 3;">
+                    <div class="col  order-0 order-lg-1">
                         <img src="img/06.jpeg" style="width: inherit;" alt="">
                         <p class="annotation text-right mt-4">"Баннер №1"</p>
-                        <h3>Лучшие <br> баннеры</h3>
-                        <p class="date date-right">Январь 2019</p>
+                        <h3 class="vertical-text-tb">Лучшие <br> баннеры</h3>
+                        <p class="date date-right vertical-text-tb">Январь 2019</p>
                     </div>
-                    <div class="col-12">
-                        <div class="w-50 d-inline-block" style="padding-left: 97px; float: left;">
-                            <p class="annotation">"Баннер №3"</p>
+                    <div class="col-12  order-2 order-lg-2">
+                        <div class="w-50 d-inline-block img-block">
+                            <p class="annotation" style="width: 370px; text-align: right;">"Баннер №3"</p>
                             <img src="img/08.jpeg" alt="">
                         </div>
-                        <div class="work-desciption d-inline-block" style="width: 27%; padding-top:72px;">
+                        <div class="work-desciption d-inline-block">
                                 <h5>3 баннера для “EnergoTest”</h5>
                                 <p class="text-block">Это трилогия изображений для главного 
                                     экрана сайта. Их цель максимально 
@@ -170,27 +181,27 @@
                     </ul>
                 </div>
                 <div class="row work-tmbl filter-cat-results">
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-web">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-web">
                         <img src="img/09.jpeg" alt="Промо сайт Партнерская программа BG">
                         <p>Промо сайт <br> "Партнерская программа BG"</p>
                     </div>
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-web">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-web">
                         <img src="img/10.jpeg" alt="Сайт визитка AgilWorld">
                         <p class="text-white">Сайт визитка <br> "AgilWorld"</p>
                     </div>
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-logo">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-logo">
                         <img src="img/11.jpeg" alt="Логотип Kristale Agency">
                         <p>Логотип <br> "Kristale Agency"</p>
                     </div>
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-vector">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-vector">
                         <img src="img/12.jpeg" alt="Сеть иконок Детство">
                         <p class="text-white">Сеть иконок <br> "Детство"</p>
                     </div>
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-vector">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-vector">
                         <img src="img/13.jpeg" alt="Сеть иконок Web">
                         <p>Сеть иконок <br> "Web"</p>
                     </div>
-                    <div class="col-4 mb-4 f-cat" data-filter="filter-other">
+                    <div class="col-6 col-lg-4 mb-4 f-cat" data-filter="filter-other">
                         <img src="img/14.jpeg" alt="Презентационный баннер Horror Quest">
                         <p class="text-white">Презентационный баннер <br> "Horror Quest"</p>
                     </div>
@@ -201,14 +212,14 @@
         <section class="aboutme-main mt-5" style="padding-top: 80px;" >
             <div class="container">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-1 col-lg-2">
                         <h3 class="vertical-text">Обо мне</h3> 
                     </div>
-                    <div class="col-3">
+                    <div class="col-5 col-lg-3">
                         <img src="img/16.jpeg" alt="веб-дизайнер Анна Климушева">
                     </div>
-                    <div class="col-3">
-                        <h5>Опыт</h5>
+                    <div class="col-6 col-lg-3" style="padding-left: 30px;">
+                        <h5 style=" padding-bottom: 40px;">Опыт</h5>
                         <p class="text-block">В сфере веб-дизайна я работаю 
                         с 2017 года. В апреле начала работу 
                         в компании PanshinGroup, где работала 
@@ -218,13 +229,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="row" style="margin-top: -120px;">
-                    <div class="col-5 offset-3" style="padding-left: 93px;">
+                <div class="row d-flex" style="margin-top: -120px;">
+                    <div class="col-5 offset-3 order-1 order-lg-0 knowledges-img">
                         <img src="img/15.jpeg" alt="веб-дизайнер Анна Климушева">
                     </div>
-                    <div class="col-4">
-                            <h5>Знания</h5>
-                            <p class="text-block">Основные скилы в веб-дизайне я получила на курсах Highlights и SkillBox. 
+                    <div class="col-4 order-0 order-lg-1 knowledges-text">
+                            <h5 class="vertical-text">Знания</h5>
+                            <p class="text-block" style="margin-left: 32px;">Основные скилы в веб-дизайне я получила на курсах Highlights и SkillBox. 
                             Там же изучила основы верстки и бэкэнда. Также успешно прошла обучение 
                             в художественной школе. За спиной высшее образование по другой специальности.
                             </p>
@@ -235,15 +246,15 @@
         <section class="contacts-main">
             <div class="container">
                 <div class="row" style="margin-bottom: 98px;">
-                    <div class="col-4 offset-8">
+                    <div class="text-right col-12 col-lg-4 offset-lg-8">
                         <h3>Контакты</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-5 offset-1">
+                <div class="row contact-phones">
+                    <div class="col-12 col-lg-5 offset-lg-1">
                         <a href="https://www.facebook.com/subbdominanta"><i class="fab fa-facebook-square"></i> https://www.facebook.com/subbdominanta</a>
                     </div>
-                    <div class="col-5 offset-1">
+                    <div class="col-12 col-lg-5 offset-lg-1">
                             <i class="fas fa-phone-square-alt"></i>
                             <i class="fab fa-telegram"></i> 
                             <a href="#">+38 (099) 123-45-67</a>
@@ -256,13 +267,14 @@
     <footer>
         <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="#">ANN</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo 1.svg" alt="">
+                    </a>
+                    <span class="brand-name">Hanna's Portfolio</span>
+                   
+                    <div class="justify-content-end">
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">Лучшее <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">

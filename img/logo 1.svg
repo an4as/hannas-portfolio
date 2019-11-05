@@ -1,0 +1,18 @@
+<svg id="logo_1.svg" data-name="logo 1.svg" xmlns="http://www.w3.org/2000/svg" width="170" height="50" viewBox="0 0 170 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d014af;
+      }
+
+      .cls-2 {
+        font-size: 149.557px;
+        fill: #0327e2;
+        font-family: "Noto Serif";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect id="logo" class="cls-1" width="170" height="50"/>
+  <text id="ANN" class="cls-2" transform="translate(5.946 49.974) scale(0.488)">ANN</text>
+</svg>

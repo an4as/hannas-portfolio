@@ -49,12 +49,46 @@ ul{
     transform:rotate(-90deg) translate(-50%, 50%);
     
 }
+.vertical-text-tb{
+    -webkit-writing-mode: vertical-rl; 
+    writing-mode:tb-rl;
+    display: inline;
+}
+.nav-link{
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-weight: 400;
+    position: relative;
+}
+.nav-link::after{
+    position: absolute;
+    content: "";
+    background-color:transparent;
+    width: 80%;
+    margin-left: -80%;
+    top: 50%;
+}
+.nav-link:hover{
+    filter: drop-shadow(0 0 20px rgba(255,255,255,1));
+    
+}
+.nav-link:hover::after{
+    box-shadow: 0px 0px 27px 10px rgba(255,255,255,0.61);
+    -webkit-box-shadow: 0px 0px 27px 10px rgba(255,255,255,0.61);
+    -moz-box-shadow: 0px 0px 27px 10px rgba(255,255,255,0.61);
+}
+.nav-item{
+    font-size: 14px;
+}
 
 .main-banner{
-    background: url(../img/01_main_photo.png) no-repeat center fixed;
-    // background-size: cover;
+    height: 909px;
+//     position: relative;
+    background: url(../img/01_main_photo.png) no-repeat center top;
+    background-size: cover;
     // height: 100vh;
-    background-size: auto 100%;
+    // background-size: auto 100%;
     // height: 100vh;
     h1{
         font-size: 13vw;
@@ -71,6 +105,11 @@ ul{
     .container-fluid{
         padding-right: 90px;
         padding-left: 90px;
+    }
+    .navbar{
+        height: 50px;
+        padding-top: 25px;
+        padding-left: 0;
     }
    }
 
@@ -110,9 +149,7 @@ ul{
 }
 .mens-shop{
     h3{
-        -webkit-writing-mode: vertical-rl; 
-        writing-mode:tb-rl;
-        display: inline;
+        
         margin-top: 147px;
         // height: 100%;
         float: left;
@@ -143,12 +180,12 @@ ul{
     // height: 100%;
     display: inline-block;
     padding-top: 186px;
-    padding-left: 115px;
+    padding-left: 43px;
     
 }
 .mens-shop h3{
-    height: 55%;
-    white-space: nowrap;
+  margin-left:55px;
+   
 }
 .date-left{
     // -moz-transform-origin:0 50%;
@@ -162,16 +199,20 @@ ul{
     // transform-origin:0 50%;
     // transform:rotate(-90deg) translate(-50%, 50%);
     float: left;
-    height: 100%;
-    width: 16%;
+    // height: 100%;
+    // width: 16%;
+    position: absolute;
+    bottom: 270px;
+    left: 80px;
+
 }
 .date-right{
-    -webkit-writing-mode: vertical-rl; 
-        writing-mode:tb-rl;
         display: inline;
-        float: left;
+        // float: left;
 }
-
+.best-logo{
+    position: relative;
+}
 .best-logo h3{
     // -moz-transform-origin:0 50%;
     // -moz-transform:rotate(-90deg) translate(-50%, 50%);
@@ -185,36 +226,62 @@ ul{
     // transform:rotate(-90deg) translate(-50%, 50%);
     white-space: nowrap;
     margin:0;
-    margin-left: 190px;
+}
+.best-logo .work-title{
+    position: absolute;
+    left: 284px;
+    top: 18px;
 }
 .best-logo .work-desciption{
-    margin-top: 86px;
-    padding-left: 158px;
-    padding-right: 50px;
+    margin-top: 350px;
+    padding-left: 190px;
 }
 .best-logo .annotation{
     display: inline-block;
-    width: 18%;
+    width: 20%;
     margin-left: 20px;
 }
 .best-logo .bp{
     margin-left: 20px;
     margin-top: 142px;
 }
-
+.best-banners{
+    margin-top: -110px; 
+    margin-bottom: 140px;
+}
+.best-banners .order-0{
+    margin-left: -130px; 
+    z-index: 3;
+}
+.best-banners .order-1{
+    padding-top: 170px; 
+    z-index: 5;
+}
+.best-banners .order-2{
+    margin-top: -37px;
+}
+.best-banners .order-2 .img-block{
+    padding-left: 97px; float: left;
+}
+.best-banners .order-2 .work-desciption{
+    width: 27%; 
+    padding-top:72px; 
+    margin-left: 240px;
+}
 .best-banners h3{
-    -webkit-writing-mode: vertical-rl; 
-        writing-mode:tb-rl;
         display: inline;
-        margin-top: 68px;
-        padding-left: 77px;
+        margin-top: 45px;
+        padding-left: 135px;
         // height: 52%;
         float: left;
 }
 .best-banners .date-right{
-    margin-top: 68px;
-    margin-left: 230px;
+    margin-top: 45px;
+    margin-left: 270px;
     // height: 52%;
+}
+.best-banners .annotation{
+    padding-bottom: 25px;
 }
 // more works style
 .more-works-main  h3{
@@ -295,6 +362,8 @@ ul{
     // transform:rotate(-90deg) translate(-50%, 50%);
     width: 341px;
     margin-top: 86px;
+    font-weight: 700;
+    margin-left: 60px;
 }
 
 // .aboutme-main p{
@@ -304,7 +373,20 @@ ul{
 .aboutme-main h5{
     color: $brandColor2;
     font-size: 18px;
+    font-weight: 700;
 }
+.aboutme-main .knowledges-text{
+    position: relative;
+}
+.aboutme-main .knowledges-text .vertical-text{
+    position: absolute; 
+    left:0; 
+    top: 55px;
+}
+.aboutme-main .knowledges-img{
+    padding-left: 93px;
+}
+
 // contact style
 .contacts-main{
     margin-bottom: 86px;
@@ -313,6 +395,7 @@ ul{
 .contacts-main h3{
     color: $brandColor1;
     font-size: 48px;
+    font-weight: 700;
 }
 .contacts-main i{
     color: $brandColor1;
@@ -333,17 +416,190 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0327e2",endCo
 
 footer .navbar{
     padding-top: 98px;
+    height: 148px;
+    padding-left: 0;
 }
-
+// footer .navbar-collapse,
+// footer .navbar-collapse ul{
+//     height: inherit;
+// }
+footer .brand-name{
+    font-size: 50px;
+    color: #ffffff;
+    font-family: "Noto Serif";
+    font-weight: 400;
+    margin-left: 1rem;
+}
 .footer-text{
-    color: #fff;
     font-size: 14px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-weight: 400;
     margin-top: 110px;
 }
 
 @media (min-width: 1200px){
     .main-banner .container {
         max-width: 1300px;
+    }
+}
+@media (max-width: 1280px){
+    .main-banner h1 {        
+        margin-top: 19%;
+        
+    }
+    .main-banner-text{
+        margin-top:109px;
+    }
+    .container-fluid{
+        padding-left:55px!important;
+        padding-right: 55px!important;
+    }
+}
+
+@media (max-width: 768px){
+    .mens-shop .work-desciption {
+        padding-top:30px;
+    }
+
+    .mens-shop .work-desciption .text-block{
+        width:600px;
+    }
+    .best-logo{
+        margin-top: 100px;
+    }
+    .best-logo .work-title{
+        position: relative;
+        left: unset;
+        top: unset;
+    }
+    .best-logo h3{
+        position: absolute;
+        top: 110px;
+        width: unset;
+    }
+    .best-logo .work-title img{
+        margin-left: 109px!important;
+    }
+    .best-logo .work-desciption{
+        margin-top: 60px;
+        padding-left:0;
+    }
+    .best-logo .date-left{
+        bottom: 30px;
+        left: unset;
+        right: -75px;
+    }
+    .best-logo .bp {
+        margin-left: -45px;
+        padding-top:142px;
+        margin-top:0;
+    }
+    .best-logo .annotation {
+        margin-right: -55px;
+        height: 15%;
+        width: unset;
+        margin-top:40px;
+    }
+    .best-banners{
+        margin-top: 130px;
+    }
+    .best-banners .order-0{
+        margin-left: 0;
+        position: relative;
+    }
+    .best-banners .order-0 img{
+        width: 655px!important;
+        height: auto;
+        float: right;
+    }
+    .best-banners h3{
+        float: right;
+        margin-top: 15px;
+        padding-left:0;
+    }
+    .best-banners .order-1{
+        padding-top: 0;
+        margin-top: -402px;
+        position: relative;
+    }
+    .best-banners .order-1 .annotation{
+        position: absolute;
+        bottom:-66px;
+    }
+    .best-banners .order-1 img{
+        width: 560px;
+        height: auto;
+    }
+    .best-banners .order-2{
+        margin-top:30px;
+    }
+    .best-banners .order-2 .img-block{
+        float: right;
+        padding-left: 0;
+    }
+    .best-banners .order-2 .work-desciption{
+        width: 40%; 
+        padding-top:0; 
+        margin-left: 0;
+        padding-top: 40px;
+    }
+    .best-banners .date-right{
+        position: absolute;
+        margin-top: 0;
+        margin-left: 0;
+        bottom: -332px;
+        left: 45%;
+    }
+    .work-tmbl img{
+        width: inherit;
+    }
+    .aboutme-main h3:first-child{
+        margin-left: 0;
+    }
+    .aboutme-main .knowledges-text{
+        padding-top: 176px;
+    }
+
+    .aboutme-main .knowledges-text .vertical-text{
+        top: unset;
+        bottom: 53px;
+    }
+    .aboutme-main .knowledges-img{
+        padding-left: 0;
+    }
+    .contacts-main{
+        margin-top: 80px;
+    }
+    .contact-phones{
+        text-align: center;
+        font-size: 24px!important;
+    }
+    .contact-phones i{
+        margin-right: 1rem;
+    }
+    .contact-phones div:first-child{
+        margin-bottom: 40px;
+    }
+    footer .navbar {
+        padding-top: 50px;
+        height: 115px;
+    }
+    footer .brand-name{
+        width: 80%;
+        margin-left: 0;
+        margin-top: -119px;
+    }
+    footer .navbar-nav{
+        margin-top: -66px;
+        text-align: right;
+    }
+    footer .nav-link{
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    footer .footer-text{
+        margin-top: 133px;
     }
 }
 
