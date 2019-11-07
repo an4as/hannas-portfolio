@@ -1,5 +1,5 @@
 html, body {
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -85,6 +85,19 @@ ul {
   font-size: 14px;
 }
 
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-dark .navbar-toggler .fa-bars {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.navbar-toggler:focus {
+  border-color: transparent;
+}
+
 .main-banner {
   height: 909px;
   background: url(../img/01_main_photo.png) no-repeat center top;
@@ -93,7 +106,7 @@ ul {
 
 .main-banner h1 {
   font-size: 13vw;
-  margin-top: 12%;
+  margin-top: 15%;
   line-height: 13vw;
   color: #ffffff;
   font-family: "Noto Serif";
@@ -124,6 +137,16 @@ ul {
   font-weight: 400;
   font-style: italic;
   text-align: right;
+}
+
+.main-banner-text div:nth-child(2) {
+  padding-left: 169px;
+}
+
+.main-banner-text .vertical-text {
+  display: inline-block;
+  height: 146px;
+  font-weight: 700;
 }
 
 .date {
@@ -198,25 +221,40 @@ ul {
 }
 
 .best-logo .work-title {
-  position: absolute;
-  left: 284px;
-  top: 18px;
+  margin-left: 25%;
 }
 
 .best-logo .work-desciption {
-  margin-top: 350px;
-  padding-left: 190px;
+  margin-left: 190px;
+  width: 300px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 210px;
+}
+
+.best-logo .work-desciption h5 {
+  width: 300px;
+  display: inline-block;
+}
+
+.best-logo .work-desciption .text-block {
+  display: inline-block;
 }
 
 .best-logo .annotation {
   display: inline-block;
-  width: 20%;
+  width: 9%;
   margin-left: 20px;
 }
 
 .best-logo .bp {
-  margin-left: 20px;
-  margin-top: 142px;
+  margin-left: 9.5%;
+  width: 370px;
+  display: inline-block;
+}
+
+.best-logo .best-logo-block2 {
+  margin-top: -11.2%;
 }
 
 .best-banners {
@@ -366,6 +404,14 @@ ul {
   padding-left: 93px;
 }
 
+.aboutme-section2 {
+  margin-top: -120px;
+}
+
+.aboutme-main .aboutme-exp-text {
+  padding-left: 30px;
+}
+
 .contacts-main {
   margin-bottom: 86px;
   margin-top: -25px;
@@ -385,17 +431,27 @@ ul {
   color: #0327e2;
 }
 
+.contacts-main .contact-icons {
+  display: inline;
+}
+
+.contacts-main .container .row:first-child {
+  padding-bottom: 98px;
+}
+
 footer {
   height: 300px;
-  background: #0327e2;
-  background: linear-gradient(10deg, #0327e2 17%, #d014af 54%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0327e2",endColorstr="#d014af",GradientType=1);
+  background-image: linear-gradient(9deg, #0327e2 0%, #d014af 100%);
 }
 
 footer .navbar {
   padding-top: 98px;
   height: 148px;
   padding-left: 0;
+}
+
+footer .navbar-nav {
+  padding-left: 138px;
 }
 
 footer .brand-name {
@@ -427,6 +483,9 @@ footer .brand-name {
   .main-banner-text {
     margin-top: 109px;
   }
+  .main-banner-text div:nth-child(2) {
+    padding-left: 0;
+  }
   .container-fluid {
     padding-left: 55px !important;
     padding-right: 55px !important;
@@ -434,8 +493,24 @@ footer .brand-name {
 }
 
 @media (max-width: 768px) {
+  .main-banner {
+    height: 765px;
+  }
+  .main-banner h1 {
+    font-size: 150px;
+    line-height: 150px;
+    margin-top: 130px;
+  }
+  .main-banner-text .vertical-text {
+    height: 62px;
+    width: 106%;
+  }
+  .main-banner-text div:last-child {
+    padding-bottom: 32px;
+  }
   .mens-shop .work-desciption {
     padding-top: 30px;
+    padding-left: 0;
   }
   .mens-shop .work-desciption .text-block {
     width: 600px;
@@ -447,6 +522,7 @@ footer .brand-name {
     position: relative;
     left: unset;
     top: unset;
+    margin-left: 0;
   }
   .best-logo h3 {
     position: absolute;
@@ -457,24 +533,29 @@ footer .brand-name {
     margin-left: 109px !important;
   }
   .best-logo .work-desciption {
-    margin-top: 60px;
+    margin-top: 159px;
     padding-left: 0;
+    margin-left: 0;
+  }
+  .best-logo .work-desciption .text-block {
+    width: 260px;
   }
   .best-logo .date-left {
     bottom: 30px;
     left: unset;
-    right: -75px;
+    right: 344px;
   }
   .best-logo .bp {
-    margin-left: -45px;
-    padding-top: 142px;
-    margin-top: 0;
+    margin-left: 15px;
+    padding-top: 0;
+    margin-top: -47px;
   }
   .best-logo .annotation {
-    margin-right: -55px;
+    margin-right: unset;
     height: 15%;
-    width: unset;
-    margin-top: 40px;
+    width: 16%;
+    margin-top: -138px;
+    margin-left: -368px;
   }
   .best-banners {
     margin-top: 130px;
@@ -523,8 +604,8 @@ footer .brand-name {
     position: absolute;
     margin-top: 0;
     margin-left: 0;
-    bottom: -332px;
-    left: 45%;
+    bottom: -335px;
+    left: 42%;
   }
   .work-tmbl img {
     width: inherit;
@@ -551,6 +632,7 @@ footer .brand-name {
   }
   .contact-phones i {
     margin-right: 1rem;
+    font-size: 2rem;
   }
   .contact-phones div:first-child {
     margin-bottom: 40px;
@@ -567,6 +649,7 @@ footer .brand-name {
   footer .navbar-nav {
     margin-top: -66px;
     text-align: right;
+    padding-left: 0;
   }
   footer .nav-link {
     padding-top: 20px;
@@ -574,6 +657,250 @@ footer .brand-name {
   }
   footer .footer-text {
     margin-top: 133px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .main-banner {
+    height: 480px;
+    background: unset;
+    background-size: cover;
+    background: #f020af;
+    background-image: linear-gradient(39deg, #d014af 0%, #0022e7 100%);
+  }
+  .main-banner h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 80px;
+  }
+  .main-banner-text .vertical-text {
+    -moz-transform-origin: unset;
+    -moz-transform: unset;
+    -webkit-transform-origin: unset;
+    -webkit-transform: unset;
+    -o-transform-origin: unset;
+    -o-transform: unset;
+    -ms-transform-origin: unset;
+    -ms-transform: unset;
+    transform-origin: unset;
+    transform: unset;
+  }
+  .main-banner-text {
+    margin-top: 0;
+  }
+  .main-banner-text div:nth-child(2) {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .mens-shop img:nth-child(1) {
+    display: none;
+  }
+  .mens-shop img:nth-child(2) {
+    margin-top: 0;
+    margin-left: -15px;
+    width: 320px;
+  }
+  .mens-shop h3 {
+    margin-left: -3px;
+    margin-top: 119px;
+    margin-bottom: 0;
+  }
+  .annotation {
+    font-size: 12.5px;
+  }
+  .mens-shop .work-desciption {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: -50px;
+  }
+  .mens-shop .work-desciption .text-block {
+    width: 290px;
+  }
+  .mens-shop .date-right.vertical-text-tb {
+    -webkit-writing-mode: inherit !important;
+    -ms-writing-mode: inherit !important;
+        writing-mode: inherit !important;
+    display: block;
+  }
+  .mens-shop .date-right {
+    position: unset !important;
+    text-align: right;
+  }
+  .best-logo .work-title {
+    margin-left: 0;
+  }
+  .best-logo .best-logo-block2 {
+    margin-top: 0;
+  }
+  .best-logo .work-desciption {
+    margin-left: 0;
+    vertical-align: unset;
+  }
+  .best-logo .annotation {
+    margin-right: 0;
+    width: 32%;
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+  .best-logo .bp {
+    padding-top: 47px;
+    width: 320px;
+  }
+  .best-logo .work-desciption {
+    margin-top: 46px;
+    width: 100%;
+  }
+  .best-logo .work-desciption .text-block {
+    width: 100%;
+  }
+  .best-logo .date-left.vertical-text {
+    position: absolute;
+    bottom: -41px;
+    right: 14px;
+    -moz-transform-origin: unset;
+    -moz-transform: unset;
+    -webkit-transform-origin: unset;
+    -webkit-transform: unset;
+    -o-transform-origin: unset;
+    -o-transform: unset;
+    -ms-transform-origin: unset;
+    -ms-transform: unset;
+    transform-origin: unset;
+    transform: unset;
+  }
+  .best-banners .order-1 {
+    margin-top: -263px;
+  }
+  .best-banners .order-1 img {
+    margin-left: -151%;
+  }
+  .best-banners .order-2 {
+    padding-bottom: 300px;
+  }
+  .best-banners .order-2 .work-desciption {
+    width: 100%;
+  }
+  .best-banners .order-2 .work-desciption .text-block {
+    width: 100%;
+  }
+  .best-banners .order-2 .img-block {
+    position: relative;
+  }
+  .best-banners .order-2 .annotation {
+    position: absolute;
+    top: 545px;
+    right: 72px;
+    text-align: unset !important;
+    width: 200px !important;
+  }
+  .best-banners .banner-3 {
+    position: absolute;
+    top: 285px;
+    right: -55px;
+  }
+  .best-banners .date-right.vertical-text-tb {
+    bottom: -781px;
+    left: 68%;
+    -webkit-writing-mode: unset;
+    -ms-writing-mode: unset;
+    writing-mode: unset;
+  }
+  .more-works-main .work-picker {
+    margin-bottom: 15px;
+  }
+  .more-works-main .work-picker ul {
+    display: unset;
+    padding: 0;
+  }
+  .more-works-main .work-picker li {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.3rem;
+    width: 127px;
+    display: inline-block;
+  }
+  .aboutme-photo1 {
+    margin-bottom: 182px;
+  }
+  .aboutme-section2 {
+    margin-top: -487px;
+  }
+  .aboutme-main .knowledges-img {
+    width: 290px;
+    padding-left: 10px;
+  }
+  .aboutme-main .knowledges-img img {
+    width: inherit;
+  }
+  .aboutme-main .text-block {
+    width: 100%;
+  }
+  .aboutme-main .knowledges-text {
+    padding-top: 245px;
+  }
+  .aboutme-main .aboutme-exp-text {
+    padding-left: 15px;
+  }
+  .aboutme-main h3:first-child {
+    margin-top: 13px;
+  }
+  .aboutme-main .knowledges-text .vertical-text {
+    left: 13px;
+    bottom: 77px;
+  }
+  .contacts-main .contact-icons {
+    display: block;
+    font-size: 60px;
+  }
+  .contacts-main a.facebook span {
+    display: none;
+  }
+  .contacts-main a.facebook {
+    font-size: 60px;
+  }
+  .contact-phones div:first-child {
+    margin-bottom: 0;
+  }
+  .contacts-main .container .row:first-child {
+    padding-bottom: 30px;
+  }
+  .contacts-main .telegram-phone a {
+    display: block;
+  }
+  .contacts-main {
+    margin-bottom: 65px;
+  }
+  footer {
+    height: 438px;
+  }
+  footer .brand-name {
+    margin-top: 0;
+  }
+  footer .navbar-nav {
+    text-align: center;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    margin-top: 0;
+    display: unset;
+  }
+  footer .nav-item {
+    display: inline-block;
+    width: 125px;
+  }
+  footer .footer-text {
+    margin-top: 290px;
+  }
+  footer .navbar-dark .navbar-nav .nav-link {
+    color: white;
   }
 }
 /*# sourceMappingURL=main.css.map */
