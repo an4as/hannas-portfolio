@@ -59,6 +59,7 @@ ul {
   font-family: "Noto Sans";
   font-weight: 400;
   position: relative;
+  padding: 0.5rem 1rem !important;
 }
 
 .nav-link::after {
@@ -96,6 +97,12 @@ ul {
 
 .navbar-toggler:focus {
   border-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
 }
 
 .main-banner {
@@ -147,12 +154,18 @@ ul {
   display: inline-block;
   height: 146px;
   font-weight: 700;
+  font-size: 14px;
+  font-family: "Noto Serif", serif;
+  line-height: 18px;
+  color: #333;
 }
 
 .date {
   font-size: 14px;
   color: #0327e2;
-  font-weight: 600;
+  font-family: "Noto Serif", serif;
+  line-height: 18px;
+  font-weight: 700;
 }
 
 .annotation {
@@ -364,6 +377,24 @@ ul {
   position: relative;
 }
 
+.work-tmbl .f-cat:hover {
+  -webkit-filter: drop-shadow(0 0 15px rgba(51, 51, 51, 0.2));
+          filter: drop-shadow(0 0 15px rgba(51, 51, 51, 0.2));
+}
+
+.work-tmbl img,
+.work-tmbl a {
+  width: inherit;
+}
+
+.work-tmbl a {
+  color: unset;
+}
+
+.work-tmbl .mb-4 {
+  margin-bottom: 30px !important;
+}
+
 .work-tmbl p {
   position: absolute;
   top: 43%;
@@ -429,6 +460,16 @@ ul {
 
 .contacts-main a {
   color: #0327e2;
+  font-size: 24px;
+}
+
+.fa-facebook-square,
+.fa-phone-square-alt {
+  font-size: 36px;
+}
+
+.fa-telegram {
+  font-size: 32px;
 }
 
 .contacts-main .contact-icons {
@@ -441,7 +482,7 @@ ul {
 
 footer {
   height: 300px;
-  background-image: linear-gradient(9deg, #0327e2 0%, #d014af 100%);
+  background-image: linear-gradient(11deg, #0327e2 25%, #d014af 80%);
 }
 
 footer .navbar {
@@ -451,7 +492,7 @@ footer .navbar {
 }
 
 footer .navbar-nav {
-  padding-left: 138px;
+  padding-left: 75px;
 }
 
 footer .brand-name {
