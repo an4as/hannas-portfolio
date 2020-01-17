@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  background-color: #f7f7f7;
 }
 
 body {
@@ -24,6 +25,10 @@ ul {
   list-style: none;
 }
 
+.display320 {
+  display: none;
+}
+
 .text-block {
   width: 300px;
   font-size: 14px;
@@ -31,6 +36,14 @@ ul {
   color: #333;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
+}
+
+.best-works .container-fluid,
+.more-works-main .container-fluid,
+.aboutme-main .container-fluid,
+.contacts-main .container-fluid,
+footer .container-fluid {
+  width: 1201px !important;
 }
 
 .vertical-text {
@@ -105,6 +118,23 @@ ul {
   color: white;
 }
 
+.menu-header.clone {
+  position: fixed;
+  top: -110px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding-left: 20.8% !important;
+  padding-right: 20.8% !important;
+  background-image: linear-gradient(11deg, #0327e2 25%, #d014af 80%);
+  -webkit-transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+  transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
+}
+
+body.down .menu-header.clone {
+  top: 0;
+}
+
 .main-banner {
   height: 909px;
   background: url(../img/01_main_photo.png) no-repeat center top;
@@ -113,7 +143,7 @@ ul {
 
 .main-banner h1 {
   font-size: 13vw;
-  margin-top: 15%;
+  margin-top: 10.5%;
   line-height: 13vw;
   color: #ffffff;
   font-family: "Noto Serif";
@@ -126,9 +156,13 @@ ul {
 }
 
 .main-banner .navbar {
-  height: 50px;
+  height: auto;
   padding-top: 25px;
   padding-left: 0;
+}
+
+.main-banner .navbar-nav li:last-child a {
+  padding-right: 0 !important;
 }
 
 .main-banner-text {
@@ -160,6 +194,18 @@ ul {
   color: #333;
 }
 
+section.best-works {
+  background-image: url(../img/bg_shapes/Shape_1.png), url(../img/bg_shapes/Shape_2.png);
+  background-position: 105% 84px, left 744px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+main {
+  background-image: url(../img/bg_shapes/Shape_5.png), url(../img/bg_shapes/Shape_3.png), url(../img/bg_shapes/Shape_4.png);
+  background-position: left 107%, right 53%, right 86%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
 .date {
   font-size: 14px;
   color: #0327e2;
@@ -177,14 +223,22 @@ ul {
   font-style: italic;
 }
 
-.mens-shop img:nth-child(2) {
+.mens-shop img:nth-child(2),
+.mens-shop .mens-shop-link {
   margin-top: -386px;
   margin-left: 68px;
+  display: block;
 }
 
 .mens-shop h3 {
-  margin-top: 147px;
-  float: left;
+  margin-top: 154px;
+  height: 58%;
+  float: right;
+  margin-right: -3.5%;
+}
+
+.mens-shop-img {
+  width: 80%;
 }
 
 .best-works h3 {
@@ -203,21 +257,28 @@ ul {
   margin-bottom: 41px;
 }
 
+.mens-shop .annotation {
+  width: 550px;
+  display: inline-block;
+}
+
 .mens-shop .work-desciption {
   display: inline-block;
   padding-top: 186px;
-  padding-left: 43px;
+  padding-left: 20%;
 }
 
-.mens-shop h3 {
-  margin-left: 55px;
+.mens-shop .date-right {
+  position: absolute;
+  bottom: 8%;
+  right: 3%;
 }
 
 .date-left {
   float: left;
   position: absolute;
   bottom: 270px;
-  left: 80px;
+  left: 66px;
 }
 
 .date-right {
@@ -234,11 +295,11 @@ ul {
 }
 
 .best-logo .work-title {
-  margin-left: 25%;
+  margin-left: 23.3%;
 }
 
 .best-logo .work-desciption {
-  margin-left: 190px;
+  margin-left: 188px;
   width: 300px;
   display: inline-block;
   vertical-align: text-top;
@@ -276,12 +337,12 @@ ul {
 }
 
 .best-banners .order-0 {
-  margin-left: -130px;
   z-index: 3;
+  position: relative;
 }
 
 .best-banners .order-1 {
-  padding-top: 170px;
+  margin-top: -52.5%;
   z-index: 5;
 }
 
@@ -297,19 +358,18 @@ ul {
 .best-banners .order-2 .work-desciption {
   width: 27%;
   padding-top: 72px;
-  margin-left: 240px;
+  margin-left: 28.5%;
 }
 
 .best-banners h3 {
   display: inline;
-  margin-top: 45px;
-  padding-left: 135px;
-  float: left;
+  margin-top: 1.3%;
+  margin-right: 35.5%;
 }
 
 .best-banners .date-right {
-  margin-top: 45px;
-  margin-left: 270px;
+  position: absolute;
+  right: 7%;
 }
 
 .best-banners .annotation {
@@ -398,9 +458,13 @@ ul {
 .work-tmbl p {
   position: absolute;
   top: 43%;
-  width: 100%;
+  width: 93%;
   text-align: center;
   font-weight: 600;
+}
+
+.aboutme-main {
+  padding-top: 90px;
 }
 
 .aboutme-main h3 {
@@ -440,11 +504,11 @@ ul {
 }
 
 .aboutme-main .aboutme-exp-text {
-  padding-left: 30px;
+  padding-left: 3%;
 }
 
 .contacts-main {
-  margin-bottom: 86px;
+  padding-bottom: 86px;
   margin-top: -25px;
 }
 
@@ -463,9 +527,22 @@ ul {
   font-size: 24px;
 }
 
+.contact-phones {
+  margin-top: 7%;
+}
+
 .fa-facebook-square,
 .fa-phone-square-alt {
   font-size: 36px;
+}
+
+.fa-phone-square-alt {
+  margin-right: 17px;
+}
+
+.fa-facebook-square,
+.fa-telegram {
+  margin-right: 25px;
 }
 
 .fa-telegram {
@@ -495,12 +572,26 @@ footer .navbar-nav {
   padding-left: 75px;
 }
 
+footer .navbar-nav li:last-child a {
+  padding-right: 0 !important;
+}
+
+footer .brand-wrap {
+  padding-bottom: 1rem;
+}
+
+footer .navbar-brand {
+  margin-bottom: -0.5rem;
+}
+
 footer .brand-name {
   font-size: 50px;
   color: #ffffff;
   font-family: "Noto Serif";
   font-weight: 400;
   margin-left: 1rem;
+  vertical-align: bottom;
+  line-height: 50px;
 }
 
 .footer-text {
@@ -527,24 +618,75 @@ footer .brand-name {
   .main-banner-text div:nth-child(2) {
     padding-left: 0;
   }
-  .container-fluid {
-    padding-left: 55px !important;
-    padding-right: 55px !important;
+}
+
+@media (max-width: 1218px) {
+  .best-works .container-fluid,
+  .more-works-main .container-fluid,
+  .aboutme-main .container-fluid,
+  .contacts-main .container-fluid,
+  footer .container-fluid {
+    width: 100% !important;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .best-logo .annotation {
+    margin-right: unset;
+    height: 15%;
+    width: 16%;
+    margin-top: -138px;
+    margin-left: -368px;
+  }
+  .best-banners {
+    margin-top: 80px;
+  }
+  .best-banners h3 {
+    margin-right: 3.5%;
+  }
+  .best-banners .order-1 {
+    margin-top: -39.5%;
+  }
+  .best-banners .date-right {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    bottom: -335px;
+    left: 42%;
+  }
+  .best-banners .order-2 {
+    margin-top: 50px;
+  }
+  .best-banners .order-2 .work-desciption {
+    margin-left: 12.5%;
   }
 }
 
-@media (max-width: 768px) {
-  .main-banner {
-    height: 765px;
+@media (max-width: 1198px) {
+  .mens-shop h3 {
+    margin-right: -11.5%;
   }
-  .main-banner h1 {
-    font-size: 150px;
-    line-height: 150px;
-    margin-top: 130px;
+  .contact-phones {
+    text-align: center;
+    font-size: 24px !important;
   }
-  .main-banner-text .vertical-text {
-    height: 62px;
-    width: 106%;
+  .contact-phones i {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+  .contact-phones div:first-child {
+    margin-bottom: 40px;
+  }
+  .knowledges-text .text-block {
+    width: 90%;
+  }
+  .aboutme-main .aboutme-exp-text {
+    padding-left: 9%;
+  }
+}
+
+@media (max-width: 992px) {
+  .mens-shop .work-desciption .text-block {
+    width: 80%;
   }
   .main-banner-text div:last-child {
     padding-bottom: 32px;
@@ -552,9 +694,6 @@ footer .brand-name {
   .mens-shop .work-desciption {
     padding-top: 30px;
     padding-left: 0;
-  }
-  .mens-shop .work-desciption .text-block {
-    width: 600px;
   }
   .best-logo {
     margin-top: 100px;
@@ -570,16 +709,17 @@ footer .brand-name {
     top: 110px;
     width: unset;
   }
-  .best-logo .work-title img {
-    margin-left: 109px !important;
+  .best-logo .work-title a {
+    margin-left: 15% !important;
   }
   .best-logo .work-desciption {
     margin-top: 159px;
     padding-left: 0;
-    margin-left: 0;
+    margin-left: 2%;
+    width: 41%;
   }
   .best-logo .work-desciption .text-block {
-    width: 260px;
+    width: 88%;
   }
   .best-logo .date-left {
     bottom: 30px;
@@ -587,23 +727,83 @@ footer .brand-name {
     right: 344px;
   }
   .best-logo .bp {
-    margin-left: 15px;
+    margin-left: 2%;
     padding-top: 0;
     margin-top: -47px;
   }
+  .contacts-main {
+    margin-top: 80px;
+  }
+  .aboutme-main h3:first-child {
+    margin-left: 0;
+  }
+  .aboutme-main .knowledges-text {
+    padding-top: 176px;
+  }
+  .aboutme-main .knowledges-text .vertical-text {
+    top: unset;
+    bottom: 53px;
+  }
+  .aboutme-main .knowledges-img {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner .container-fluid {
+    padding-left: 15px;
+  }
+  .mens-shop .col-12,
+  .best-logo .col-12,
+  .best-banners .col-12:first-child {
+    padding-left: 3.4rem;
+  }
+  .main-banner {
+    height: 765px;
+  }
+  .main-banner h1 {
+    font-size: 150px;
+    line-height: 150px;
+    margin-top: 130px;
+  }
+  .main-banner-text .vertical-text {
+    height: 62px;
+    width: 106%;
+  }
+  .mens-shop h3 {
+    margin-right: 1.5%;
+  }
+  .best-logo .bp a {
+    width: 100%;
+  }
+  .best-logo .bp a img {
+    width: 95%;
+  }
   .best-logo .annotation {
     margin-right: unset;
-    height: 15%;
     width: 16%;
-    margin-top: -138px;
-    margin-left: -368px;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    top: -42%;
+    right: 35.5%;
   }
   .best-banners {
     margin-top: 130px;
   }
+  .best-banners .date-right {
+    left: unset;
+    right: 54%;
+    bottom: -326px;
+  }
   .best-banners .order-0 {
     margin-left: 0;
     position: relative;
+  }
+  .best-banners .order-0 .annotation {
+    position: absolute;
+    right: 2%;
+    top: 54.5%;
   }
   .best-banners .order-0 img {
     width: 655px !important;
@@ -612,12 +812,12 @@ footer .brand-name {
   }
   .best-banners h3 {
     float: right;
-    margin-top: 15px;
+    margin-top: 84px;
     padding-left: 0;
   }
   .best-banners .order-1 {
     padding-top: 0;
-    margin-top: -402px;
+    margin-top: -431px;
     position: relative;
   }
   .best-banners .order-1 .annotation {
@@ -641,70 +841,88 @@ footer .brand-name {
     margin-left: 0;
     padding-top: 40px;
   }
-  .best-banners .date-right {
-    position: absolute;
-    margin-top: 0;
-    margin-left: 0;
-    bottom: -335px;
-    left: 42%;
-  }
   .work-tmbl img {
     width: inherit;
   }
-  .aboutme-main h3:first-child {
-    margin-left: 0;
+  .aboutme-main {
+    padding-top: 48px;
   }
-  .aboutme-main .knowledges-text {
-    padding-top: 176px;
-  }
-  .aboutme-main .knowledges-text .vertical-text {
-    top: unset;
-    bottom: 53px;
+  .aboutme-main .aboutme-photo1 {
+    width: 254px;
   }
   .aboutme-main .knowledges-img {
+    width: 280px;
+  }
+  .aboutme-main .aboutme-photo1 img,
+  .aboutme-main .knowledges-img img {
+    width: inherit;
+  }
+  .aboutme-main .aboutme-exp-text {
     padding-left: 0;
   }
-  .contacts-main {
-    margin-top: 80px;
+  .aboutme-main .knowledges-text {
+    padding-left: 6%;
   }
-  .contact-phones {
-    text-align: center;
-    font-size: 24px !important;
+  .aboutme-main .knowledges-text .vertical-text {
+    bottom: 94px;
+    left: 13%;
   }
-  .contact-phones i {
-    margin-right: 1rem;
-    font-size: 2rem;
-  }
-  .contact-phones div:first-child {
-    margin-bottom: 40px;
+  .knowledges-text .text-block {
+    width: 148%;
   }
   footer .navbar {
-    padding-top: 50px;
+    padding-top: 35px;
     height: 115px;
   }
+  footer .brand-wrap {
+    margin-top: -10%;
+  }
   footer .brand-name {
-    width: 80%;
     margin-left: 0;
-    margin-top: -119px;
+    margin-top: 16px;
+    display: block;
   }
   footer .navbar-nav {
-    margin-top: -66px;
     text-align: right;
     padding-left: 0;
   }
   footer .nav-link {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 27px !important;
+  }
+  footer .nav-link::after {
+    margin-left: -65%;
+  }
+  footer .navbar-nav li:last-child a {
+    padding-right: 1rem !important;
   }
   footer .footer-text {
     margin-top: 133px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 665px) {
+  .display320 {
+    display: inline-block;
+  }
+  .display-none-320 {
+    display: none !important;
+  }
   .container-fluid {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+  .best-works .container-fluid,
+  .aboutme-main .container-fluid {
+    width: 320px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .mens-shop .col-12, .best-logo .col-12, .best-banners .col-12:first-child {
+    padding-left: 15px;
+  }
+  .menu-header.clone {
+    display: none;
   }
   .navbar-brand {
     margin-right: 0;
@@ -716,10 +934,16 @@ footer .brand-name {
     background: #f020af;
     background-image: linear-gradient(39deg, #d014af 0%, #0022e7 100%);
   }
+  .main-banner .navbar {
+    padding-top: 18px;
+  }
   .main-banner h1 {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 80px;
+    margin-top: 45px;
+  }
+  .main-banner-text {
+    padding-top: 10px;
   }
   .main-banner-text .vertical-text {
     -moz-transform-origin: unset;
@@ -737,10 +961,11 @@ footer .brand-name {
     margin-top: 0;
   }
   .main-banner-text div:nth-child(2) {
-    padding-left: 0;
+    padding-top: 12%;
+    padding-left: 19%;
     padding-bottom: 0;
   }
-  .mens-shop img:nth-child(1) {
+  .mens-shop .bg-img {
     display: none;
   }
   .mens-shop img:nth-child(2) {
@@ -748,18 +973,36 @@ footer .brand-name {
     margin-left: -15px;
     width: 320px;
   }
+  .mens-shop .mens-shop-link-320 {
+    margin-top: 0;
+    margin-left: -15px;
+  }
   .mens-shop h3 {
-    margin-left: -3px;
-    margin-top: 119px;
+    margin-left: 83%;
+    margin-top: -89%;
     margin-bottom: 0;
+  }
+  .mens-shop-img {
+    width: 100%;
+  }
+  .mens-shop-title {
+    position: absolute;
+    bottom: -16%;
+    right: 2%;
+  }
+  .mens-shop-title h3 {
+    margin: 0;
   }
   .annotation {
     font-size: 12.5px;
   }
+  .mens-shop .annotation {
+    width: 80%;
+  }
   .mens-shop .work-desciption {
     padding-top: 0;
     padding-left: 0;
-    margin-top: -50px;
+    margin-top: 27px;
   }
   .mens-shop .work-desciption .text-block {
     width: 290px;
@@ -770,12 +1013,21 @@ footer .brand-name {
         writing-mode: inherit !important;
     display: block;
   }
+  .best-logo {
+    margin-top: 70px;
+  }
   .mens-shop .date-right {
     position: unset !important;
     text-align: right;
   }
   .best-logo .work-title {
     margin-left: 0;
+  }
+  .best-logo .work-title a {
+    margin-left: 42% !important;
+  }
+  .best-logo h3 {
+    top: 131px;
   }
   .best-logo .best-logo-block2 {
     margin-top: 0;
@@ -785,14 +1037,17 @@ footer .brand-name {
     vertical-align: unset;
   }
   .best-logo .annotation {
-    margin-right: 0;
-    width: 32%;
-    margin-top: 20px;
-    margin-left: 40%;
+    top: 5%;
+    right: 26.5%;
+    width: 31%;
   }
   .best-logo .bp {
-    padding-top: 47px;
-    width: 320px;
+    padding-top: 180px;
+    width: 100%;
+    margin-left: -15px;
+  }
+  .best-logo .bp a img {
+    width: auto;
   }
   .best-logo .work-desciption {
     margin-top: 46px;
@@ -816,11 +1071,29 @@ footer .brand-name {
     transform-origin: unset;
     transform: unset;
   }
+  .best-banners {
+    margin-bottom: 90px;
+  }
+  .best-banners h3 {
+    margin-right: -7%;
+  }
+  .best-banners .order-0 img {
+    width: auto !important;
+    margin-left: -15px;
+    float: unset;
+  }
   .best-banners .order-1 {
     margin-top: -263px;
   }
   .best-banners .order-1 img {
-    margin-left: -151%;
+    width: unset;
+    height: unset;
+  }
+  .best-banners .order-1 a {
+    margin-left: -5%;
+  }
+  .best-banners .order-1 .annotation {
+    bottom: -50px;
   }
   .best-banners .order-2 {
     padding-bottom: 300px;
@@ -836,18 +1109,18 @@ footer .brand-name {
   }
   .best-banners .order-2 .annotation {
     position: absolute;
-    top: 545px;
-    right: 72px;
+    top: 510px;
+    right: 90px;
     text-align: unset !important;
     width: 200px !important;
   }
   .best-banners .banner-3 {
     position: absolute;
     top: 285px;
-    right: -55px;
+    right: -15px;
   }
   .best-banners .date-right.vertical-text-tb {
-    bottom: -781px;
+    bottom: -725px;
     left: 68%;
     -webkit-writing-mode: unset;
     -ms-writing-mode: unset;
@@ -867,11 +1140,14 @@ footer .brand-name {
     width: 127px;
     display: inline-block;
   }
+  .aboutme-main {
+    padding-top: 0;
+  }
   .aboutme-photo1 {
-    margin-bottom: 182px;
+    margin-bottom: 168px;
   }
   .aboutme-section2 {
-    margin-top: -487px;
+    margin-top: -170%;
   }
   .aboutme-main .knowledges-img {
     width: 290px;
@@ -881,10 +1157,10 @@ footer .brand-name {
     width: inherit;
   }
   .aboutme-main .text-block {
-    width: 100%;
+    width: 83%;
   }
   .aboutme-main .knowledges-text {
-    padding-top: 245px;
+    padding-top: 248px;
   }
   .aboutme-main .aboutme-exp-text {
     padding-left: 15px;
@@ -896,6 +1172,10 @@ footer .brand-name {
     left: 13px;
     bottom: 77px;
   }
+  .contacts-main {
+    margin-top: 50px;
+    padding-bottom: 60px;
+  }
   .contacts-main .contact-icons {
     display: block;
     font-size: 60px;
@@ -906,6 +1186,9 @@ footer .brand-name {
   .contacts-main a.facebook {
     font-size: 60px;
   }
+  .contact-phones i {
+    font-size: 3.7rem;
+  }
   .contact-phones div:first-child {
     margin-bottom: 0;
   }
@@ -915,14 +1198,21 @@ footer .brand-name {
   .contacts-main .telegram-phone a {
     display: block;
   }
-  .contacts-main {
-    margin-bottom: 65px;
-  }
   footer {
     height: 438px;
   }
+  footer .navbar {
+    padding-top: 25px;
+  }
+  footer .brand-wrap {
+    margin-top: 0%;
+  }
   footer .brand-name {
     margin-top: 0;
+    line-height: 1.2;
+  }
+  .footer-navbar-wrap {
+    padding-top: 60px;
   }
   footer .navbar-nav {
     text-align: center;
@@ -935,7 +1225,7 @@ footer .brand-name {
   }
   footer .nav-item {
     display: inline-block;
-    width: 125px;
+    width: 130px;
   }
   footer .footer-text {
     margin-top: 290px;
